@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useAuth } from '../context/AuthContext'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+const API = 'https://api-monitor-production-f850.up.railway.app'
 
 const features = [
   { title: 'Real-time Monitoring', desc: 'Every API call tracked instantly' },
