@@ -2,7 +2,7 @@ const amqp = require('amqplib')
 const ApiLog = require('../models/apiLog.model')
 const { saveMetric, createDatabase, initDB } = require('../config/postgres')
 
-const RABBITMQ_URL = 'amqp://localhost'
+const RABBITMQ_URL = process.env.RABBITMQ_URL || 'amqp://localhost'
 const QUEUE_NAME = 'api_hits'
 const DLQ_NAME = 'api_hits_dlq'
 const MAX_RETRY = 3
