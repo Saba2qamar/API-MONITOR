@@ -1,7 +1,7 @@
 const amqp = require('amqplib')
 const circuitBreaker = require('../circuitBreaker/circuitBreaker')
 
-const RABBITMQ_URL = 'amqp://localhost'
+const RABBITMQ_URL = process.env.RABBITMQ_URL || 'amqp://localhost'
 const QUEUE_NAME = 'api_hits'
 const DLQ_NAME = 'api_hits_dlq'
 
