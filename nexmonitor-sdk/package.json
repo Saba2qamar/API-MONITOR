@@ -1,0 +1,12 @@
+{
+  "name": "nexmonitor-sdk",
+  "version": "1.0.0",
+  "description": "Official SDK for NexMonitor — API monitoring made simple.",
+  "main": "index.js",
+  "keywords": ["api", "monitoring", "nexmonitor", "express", "middleware"],
+  "author": "NexMonitor",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
