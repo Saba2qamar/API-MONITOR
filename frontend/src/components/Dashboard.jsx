@@ -6,7 +6,7 @@ import {
   XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid
 } from 'recharts'
 
-const API = 'http://localhost:5000'
+const API = 'https://api-monitor-production-f850.up.railway.app'
 
 export default function Dashboard() {
   const { user, logout } = useAuth()
