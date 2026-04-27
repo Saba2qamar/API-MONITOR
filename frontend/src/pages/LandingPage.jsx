@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 
-const API = "http://localhost:5000";
+const API = 'https://api-monitor-production-f850.up.railway.app'
 
 const FEATURES = [
   { title: "Real-time Monitoring", desc: "Every API call tracked instantly. Zero lag across all endpoints." },
