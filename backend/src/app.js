@@ -22,21 +22,21 @@ app.use(loggerMiddleware);
 startConsumer();
 
 // ── Demo routes (for testing) ──
-app.get('/api/products', (req, res) => {
+app.get('/api/products', apiKeyAuth, (req, res) => {
   res.json({ message: 'Products list', data: [] });
 });
 
-app.get('/api/users', (req, res) => {
+app.get('/api/users', apiKeyAuth, (req,res) => {
   res.json({ message: 'Users list', data: [] });
 });
 
-app.get('/api/payment', (req, res) => {
+app.get('/api/payment', apiKeyAuth, (req, res) => {
   setTimeout(() => {
     res.json({ message: 'Payment processed' });
   }, 2500);
 });
 
-app.get('/api/orders', (req, res) => {
+app.get('/api/orders', apiKeyAuth, (req, res) => {
   res.json({ message: 'Orders list', data: [] });
 });
 
