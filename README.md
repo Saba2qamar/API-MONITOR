@@ -2,6 +2,10 @@
 
 A production-grade, multi-tenant API monitoring system that tracks every request across your services in real time. Built to handle high-volume traffic with a message queue, circuit breaker, and a clean analytics dashboard.
 
+Live Demo: [api-monitor-8gl9.vercel.app](https://api-monitor-8gl9.vercel.app)
+
+---
+
 ## Tech Stack
 
 **Backend**
@@ -20,6 +24,8 @@ A production-grade, multi-tenant API monitoring system that tracks every request
 **SDK**
 - nexmonitor-sdk — drop-in Express middleware for client integration
 
+---
+
 ## Key Features
 
 - Real-time API monitoring dashboard with response time, error rate, and traffic analytics
@@ -28,6 +34,8 @@ A production-grade, multi-tenant API monitoring system that tracks every request
 - Circuit Breaker pattern — automatically blocks traffic when downstream services fail
 - Dead Letter Queue (DLQ) — failed messages are preserved, not lost
 - Dual database strategy — MongoDB for flexible raw storage, PostgreSQL for fast aggregations
+
+---
 
 ## SDK Usage
 
@@ -39,15 +47,15 @@ npm install nexmonitor-sdk
 
 ```javascript
 const NexMonitor = require('nexmonitor-sdk');
-
 const monitor = new NexMonitor('your-api-key', {
   serverUrl: 'https://your-nexmonitor-server.com'
 });
-
 app.use(monitor.track());
 ```
 
 Every API request is now automatically logged in the NexMonitor dashboard.
+
+---
 
 ## Getting Started
 
@@ -62,10 +70,8 @@ Every API request is now automatically logged in the NexMonitor dashboard.
 ```bash
 git clone https://github.com/Saba2qamar/API-MONITOR.git
 cd API-MONITOR
-
 cd backend
 npm install
-
 cd ../frontend
 npm install
 ```
@@ -89,15 +95,12 @@ PG_PORT=5432
 ```bash
 cd backend
 node src/server.js
-
 cd frontend
 npm run dev
 ```
 
+---
+
 ## How Multi-Tenancy Works
 
 Every user gets a unique API key on signup. All logs are tagged with that key, so each user only sees their own data. No two clients can access each other's metrics.
-
-## License
-
-MIT
